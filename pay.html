@@ -1,41 +1,32 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الدفع</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحة الدفع - Ali Gaming</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e0e0e0);
-      margin: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
       padding: 20px;
-      text-align: right;
-      direction: rtl;
     }
-    h1 {
-      color: #333;
+
+    h1, h2 {
+      color: #00ffff;
     }
-    .form-box {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 500px;
-      margin: auto;
-    }
-    label {
-      display: block;
-      margin: 15px 0 5px;
-    }
-    input, select, textarea {
+
+    input, textarea {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
     }
-    .submit-btn {
-      margin-top: 20px;
-      background-color: #28a745;
+
+    .button {
+      background-color: green;
       color: white;
       padding: 12px;
       border: none;
@@ -44,54 +35,67 @@
       cursor: pointer;
       width: 100%;
     }
-    .submit-btn:hover {
-      background-color: #218838;
-    }
+
     .important {
       color: red;
+      font-size: 20px;
       font-weight: bold;
-      margin: 20px 0 10px;
-      font-size: 18px;
-      text-align: center;
     }
+
+    label {
+      font-weight: bold;
+    }
+
     .note {
       font-size: 14px;
-      color: #555;
-      text-align: center;
-      margin-bottom: 10px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="form-box">
-    <h1>الدفع</h1><form action="https://wa.me/201080265792" method="get" target="_blank">
-  <label for="product">المنتج المطلوب:</label>
-  <input type="text" id="product" name="product" placeholder="مثال: 660 شدة - رقم أمريكي">
 
-  <label for="price">المبلغ المطلوب:</label>
-  <input type="text" id="price" name="price" placeholder="اكتب المبلغ هنا">
+  <h1>صفحة الدفع</h1>
 
-  <label for="pubgId">ID ببجي:</label>
-  <input type="text" id="pubgId" name="pubgId" placeholder="مثال: 1234567890">
+  <form id="paymentForm">
+    <label>المنتج المطلوب:</label>
+    <input type="text" id="product" placeholder="مثال: 60 شدة أو رقم أمريكي">
 
-  <label for="coupon">كود خصم (اختياري):</label>
-  <input type="text" id="coupon" name="coupon" placeholder="Ali2009 أو Aligaming">
+    <label>السعر:</label>
+    <input type="text" id="price" placeholder="مثال: 46 جنيه">
 
-  <div class="important">
-    حول المبلغ المطلوب للرقم التالي:<br>
-    01080265792
-  </div>
+    <label>اكتب ID ببجي (لو المنتج متعلق ببجي):</label>
+    <input type="text" id="pubgId" placeholder="مثال: 123456789">
 
-  <label for="screenshot">ارفق صورة التحويل:</label>
-  <input type="file" id="screenshot" name="screenshot" accept="image/*">
+    <label>سكرين شوت التحويل:</label>
+    <input type="file" id="screenshot">
 
-  <button class="submit-btn" type="submit">إرسال عبر واتساب</button>
-</form>
+    <label>أي ملاحظات إضافية:</label>
+    <textarea id="notes" rows="3" placeholder="اكتب أي ملاحظات هنا"></textarea>
 
-<div class="note">
-  سيتم فتح الواتساب تلقائيًا لإرسال المعلومات بعد الضغط على زر الإرسال.
-</div>
+    <p class="important">حول المبلغ المطلوب على الرقم: 01080265792</p>
+    <p>سيتم الرد عليك خلال دقائق</p>
 
-  </div>
+    <button type="button" class="button" onclick="sendWhatsApp()">إرسال على واتساب</button>
+  </form>
+
+  <script>
+    function sendWhatsApp() {
+      const product = document.getElementById("product").value;
+      const price = document.getElementById("price").value;
+      const pubgId = document.getElementById("pubgId").value;
+      const notes = document.getElementById("notes").value;
+
+      let message = `طلب جديد من موقع Ali Gaming:%0A`;
+      message += `المنتج: ${product}%0A`;
+      message += `السعر: ${price} جنيه%0A`;
+      if(pubgId) message += `ID ببجي: ${pubgId}%0A`;
+      if(notes) message += `ملاحظات: ${notes}%0A`;
+      message += `%0Aتم الدفع، وسأرسل السكرين شوت`;
+
+      const url = `https://wa.me/201080265792?text=${message}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
 </body>
 </html>

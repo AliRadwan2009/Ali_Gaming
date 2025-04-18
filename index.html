@@ -1,143 +1,160 @@
-<!DOCTYPE html><html lang="ar">
+<!DOCTYPE html>
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Gaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Gaming - متجر شدات و فيز شحن</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #dff9fb, #c7ecee);
-      color: #222;
-      direction: rtl;
-    }
-    header {
-      background-color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .menu-btn {
-      font-size: 26px;
-      cursor: pointer;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100%;
-      background: #fff;
-      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-      transition: right 0.3s;
-      padding: 20px;
-    }
-    nav.active {
-      right: 0;
-    }
-    nav ul {
-      list-style: none;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
       padding: 0;
     }
-    nav ul li {
-      margin: 15px 0;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 18px;
-    }
-    .section {
-      padding: 20px;
-    }
-    .offers {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .buy-btn {
-      background-color: #27ae60;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .footer {
-      background: #f1f1f1;
+
+    header {
+      background-color: #000;
       padding: 20px;
       text-align: center;
     }
-    .social {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
+
+    header h1 {
+      font-size: 36px;
+      color: #00ffff;
     }
-    .social a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #222;
-      background: #fff;
-      padding: 8px 15px;
+
+    .container {
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #333;
+      padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
-    .social img {
-      width: 20px;
-      height: 20px;
-      margin-left: 8px;
+
+    .product-card h3 {
+      color: #00ffff;
+    }
+
+    .button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .important {
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .nav-item {
+      padding: 10px;
+      background-color: #444;
+      border-radius: 5px;
+    }
+
+    .nav-item a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-links a {
+      margin: 0 10px;
     }
   </style>
 </head>
-<body>  <header>
-    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+<body>
+
+  <header>
     <h1>Ali Gaming</h1>
-  </header>  <nav id="sideMenu">
-    <ul>
-      <li><a href="#numbers">عروض الأرقام</a></li>
-      <li><a href="#pubg">عروض شدات ببجي</a></li>
-      <li><a href="#about">نبذة عنا</a></li>
-      <li><a href="https://wa.me/201080265792" target="_blank">الدعم</a></li>
-    </ul>
-  </nav>  <div class="section" id="numbers">
-    <div class="offers">
-      <h2>عروض الأرقام</h2>
-      <p>*أرقام أمريكية، هندية، سعودية، روسية، إلخ*</p>
-      <p>أمريكي: 150ج</p>
-      <p>هندي/روسي/سعودي: 100ج</p>
-      <p>مصري: 50ج</p>
-      <a href="pay.html?service=رقم أمريكي&amp;price=150"><button class="buy-btn">اضغط هنا للدفع</button></a>
-    </div>
-  </div>  <div class="section" id="pubg">
-    <div class="offers">
-      <h2>عروض شحن شدات ببجي</h2>
+    <p>أفضل العروض لشدات ببجي، فيزا شحن سبام وأرقام تواصل اجتماعي</p>
+  </header>
+
+  <div class="container">
+    <div class="product-card">
+      <h3>عروض شدات ببجي</h3>
+      <p>نقدم لك أفضل العروض لشراء شدات ببجي بكل الكميات</p>
       <ul>
-        <li>60 شدة: 46ج <a href="pay.html?service=60 شدة&amp;price=46"><button class="buy-btn">شراء</button></a></li>
-        <li>120 شدة: 90ج <a href="pay.html?service=120 شدة&amp;price=90"><button class="buy-btn">شراء</button></a></li>
-        <li>325 شدة: 225ج <a href="pay.html?service=325 شدة&amp;price=225"><button class="buy-btn">شراء</button></a></li>
-        <li>660 شدة: 470ج <a href="pay.html?service=660 شدة&amp;price=470"><button class="buy-btn">شراء</button></a></li>
+        <li>60 شدة: 46 جنيه</li>
+        <li>120 شدة: 90 جنيه</li>
+        <li>325 شدة: 225 جنيه</li>
+        <li>660 شدة: 470 جنيه</li>
+        <li>1850 شدة: 1210 جنيه</li>
+        <li>2850 شدة: 2350 جنيه</li>
+        <li>8100 شدة: 4700 جنيه</li>
+        <li>16200 شدة: 9500 جنيه</li>
       </ul>
+      <a href="your_purchase_page.html" class="button">شراء</a>
     </div>
-  </div>  <div class="footer">
-    <div class="social">
-      <a href="https://youtube.com/@sniper12620" target="_blank"><img src="yt.png">يوتيوب</a>
-      <a href="https://wa.me/201080265792" target="_blank"><img src="wa.png">واتساب</a>
-      <a href="https://www.facebook.com/share/1Bhx3YAurZ/" target="_blank"><img src="fb.png">فيسبوك</a>
-      <a href="https://www.instagram.com/aliradwan4387/" target="_blank"><img src="ig.png">انستقرام</a>
-      <a href="https://www.tiktok.com/@aliradwan2009" target="_blank"><img src="tt.png">تيك توك</a>
+
+    <div class="product-card">
+      <h3>عروض الأرقام</h3>
+      <p>نقدم أرقام أمريكية، هندية، سعودية، مصرية والعديد من الأرقام الأخرى</p>
+      <ul>
+        <li>رقم أمريكي: 150 جنيه</li>
+        <li>رقم هندي أو روسي: 100 جنيه</li>
+        <li>رقم سعودي أو إماراتي: 100 جنيه</li>
+        <li>رقم مصري: 50 جنيه</li>
+      </ul>
+      <a href="your_purchase_page.html" class="button">شراء</a>
     </div>
-    <p><a href="#about">نبذة عنا</a> | <a href="https://wa.me/201080265792">الدعم</a></p>
-  </div>  <script>
-    function toggleMenu() {
-      document.getElementById('sideMenu').classList.toggle('active');
-    }
-  </script></body>
+
+    <div class="product-card">
+      <h3>كروت شحن سبام</h3>
+      <p>شراء فيز شحن سبام بنسبة نجاح مختلفة</p>
+      <ul>
+        <li>فيزا نسبة النجاح 30%: 300 جنيه</li>
+        <li>فيزا نسبة النجاح 50%: 430 جنيه</li>
+        <li>فيزا نسبة النجاح 70%: 600 جنيه</li>
+        <li>فيزا نسبة النجاح 80%: 750 جنيه</li>
+      </ul>
+      <a href="your_purchase_page.html" class="button">شراء</a>
+    </div>
+
+    <div class="product-card">
+      <h3>بيع فيز شحن سبام</h3>
+      <p>نقدم فيزا شحن سبام بنسبة نجاح مختلفة وفقاً للسعر المحدد</p>
+      <p class="important">خصم من 10% إلى 20% لأول ثلاثة عملاء</p>
+      <a href="your_purchase_page.html" class="button">شراء</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>للتواصل معنا عبر وسائل التواصل الاجتماعي</p>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/share/1Bhx3YAurZ/" target="_blank">فيسبوك</a> | 
+      <a href="https://www.instagram.com/aliradwan4387/" target="_blank">إنستغرام</a> | 
+      <a href="https://www.tiktok.com/@aliradwan2009" target="_blank">تيك توك</a>
+    </div>
+    <p class="note">© 2025 Ali Gaming. جميع الحقوق محفوظة.</p>
+  </footer>
+
+</body>
 </html>
