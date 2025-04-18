@@ -5,132 +5,139 @@
   <title>Ali Gaming</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #dff9fb, #c7ecee);
       color: #222;
-      text-align: center;
       direction: rtl;
     }
     header {
-      background-color: #ffffff;
-      padding: 30px 20px 20px;
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    h1 {
-      margin: 0;
-      font-size: 2.8em;
-      color: #444;
+    .menu-btn {
+      font-size: 26px;
+      cursor: pointer;
     }
-    .profile-pic {
-      margin-top: 20px;
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    nav {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+      transition: right 0.3s;
+      padding: 20px;
     }
-    .intro, .offers, .footer-links {
-      margin: 20px auto;
-      max-width: 600px;
-      font-size: 1.1em;
-      line-height: 1.8;
-      padding: 0 15px;
+    nav.active {
+      right: 0;
     }
-    ul {
-      text-align: right;
+    nav ul {
+      list-style: none;
+      padding: 0;
     }
-    .offer-button {
-      display: inline-block;
-      margin: 8px 0;
-      padding: 10px 20px;
-      background-color: #28a745;
+    nav ul li {
+      margin: 15px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+    }
+    .section {
+      padding: 20px;
+    }
+    .offers {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .buy-btn {
+      background-color: #27ae60;
       color: #fff;
+      padding: 10px 20px;
       border: none;
       border-radius: 8px;
-      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
     }
-    .social-links {
-      margin: 30px 0;
+    .footer {
+      background: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+    .social {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px;
     }
-    .social-links a {
+    .social a {
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      background-color: #fff;
-      padding: 10px 20px;
+      color: #222;
+      background: #fff;
+      padding: 8px 15px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-      color: #222;
-      font-weight: bold;
     }
-    .social-links a:hover {
-      background-color: #eaeaea;
-    }
-    footer {
-      padding: 15px;
-      font-size: 0.9em;
-      color: #777;
-    }
-    .footer-links a {
-      display: block;
-      margin: 10px 0;
-      color: #444;
-      font-weight: bold;
-      text-decoration: none;
+    .social img {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
     }
   </style>
 </head>
-<body>
-  <header>
+<body>  <header>
+    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
     <h1>Ali Gaming</h1>
-    <img src="user-photo.jpg" alt="Ali Radwan" class="profile-pic">
-  </header>  <div class="intro">
-    <p>مرحبًا بكم في <strong>Ali Gaming</strong>!<br>أنا علي رضوان، أقدم مجموعة من الخدمات الرقمية المميزة، منها:</p>
+  </header>  <nav id="sideMenu">
     <ul>
-      <li>توفير <strong>أرقام أمريكية</strong> وهندية وسعودية وروسية لتفعيل التطبيقات</li>
-      <li><strong>تصميم المواقع</strong> الإلكترونية وتطبيقات الموبايل</li>
-      <li><strong>تصميم الصور</strong> الشخصية أو للمحتوى</li>
-      <li><strong>مونتاج فيديوهات</strong> احترافية لليوتيوب أو تيك توك</li>
-      <li><strong>كتابة النصوص</strong> الإبداعية والتسويقية</li>
+      <li><a href="#numbers">عروض الأرقام</a></li>
+      <li><a href="#pubg">عروض شدات ببجي</a></li>
+      <li><a href="#about">نبذة عنا</a></li>
+      <li><a href="https://wa.me/201080265792" target="_blank">الدعم</a></li>
     </ul>
-  </div>  <div class="offers">
-    <h2>عروض شحن شدات ببجي</h2>
-    <ul>
-      <li>*60 شدة:* 46 جنيه <a href="payment.html?item=60&price=46" class="offer-button">شراء</a></li>
-      <li>*120 شدة:* 90 جنيه <a href="payment.html?item=120&price=90" class="offer-button">شراء</a></li>
-      <li>*325 شدة:* 225 جنيه <a href="payment.html?item=325&price=225" class="offer-button">شراء</a></li>
-      <li>*660 شدة:* 470 جنيه <a href="payment.html?item=660&price=470" class="offer-button">شراء</a></li>
-      <li>*1850 شدة:* 1210 جنيه <a href="payment.html?item=1850&price=1210" class="offer-button">شراء</a></li>
-      <li>*2850 شدة:* 2350 جنيه <a href="payment.html?item=2850&price=2350" class="offer-button">شراء</a></li>
-      <li>*8100 شدة:* 4700 جنيه <a href="payment.html?item=8100&price=4700" class="offer-button">شراء</a></li>
-      <li>*16200 شدة:* 9500 جنيه <a href="payment.html?item=16200&price=9500" class="offer-button">شراء</a></li>
-    </ul><h2>عروض الأرقام</h2>
-<ul>
-  <li>رقم أمريكي 🇺🇲 = 150ج <a href="payment.html?item=رقم أمريكي&price=150" class="offer-button">شراء</a></li>
-  <li>رقم هندي 🇮🇳 أو روسي 🇷🇺 = 100ج <a href="payment.html?item=رقم هندي/روسي&price=100" class="offer-button">شراء</a></li>
-  <li>رقم سعودي 🇸🇦 أو إماراتي 🇦🇪 = 100ج <a href="payment.html?item=رقم سعودي/إماراتي&price=100" class="offer-button">شراء</a></li>
-  <li>رقم مصري 🇪🇬 = 50ج <a href="payment.html?item=رقم مصري&price=50" class="offer-button">شراء</a></li>
-  <li>أي رقم آخر = 100ج <a href="payment.html?item=رقم آخر&price=100" class="offer-button">شراء</a></li>
-</ul>
-
-  </div>  <div class="footer-links">
-    <a href="#" onclick="alert('أنا علي رضوان، متخصص في الخدمات الرقمية مثل تصميم المواقع والتطبيقات، وتوفير الأرقام، والمونتاج، والمزيد!');">نبذة عنا</a>
-    <a href="https://wa.me/201080265792" target="_blank">الدعم</a>
-  </div>  <section class="social-links">
-    <a href="https://youtube.com/@sniper12620?si=u6_gUp9_BNipbl_S" target="_blank">يوتيوب</a>
-    <a href="https://www.facebook.com/share/1Bhx3YAurZ/" target="_blank">فيسبوك</a>
-    <a href="https://www.tiktok.com/@aliradwan2009?_t=ZS-8vdeFLQB7y6&_r=1" target="_blank">تيك توك</a>
-    <a href="https://www.instagram.com/aliradwan4387/profilecard/?igsh=bHdqcDJsNzVxdmU2" target="_blank">إنستقرام</a>
-    <a href="https://wa.me/201080265792" target="_blank">واتساب: 01080265792</a>
-    <a href="https://wa.me/201005433626" target="_blank">واتساب: 01005433626</a>
-  </section>  <footer>
-    &copy; 2025 علي رضوان - جميع الحقوق محفوظة
-  </footer>
-</body>
+  </nav>  <div class="section" id="numbers">
+    <div class="offers">
+      <h2>عروض الأرقام</h2>
+      <p>*أرقام أمريكية، هندية، سعودية، روسية، إلخ*</p>
+      <p>أمريكي: 150ج</p>
+      <p>هندي/روسي/سعودي: 100ج</p>
+      <p>مصري: 50ج</p>
+      <a href="pay.html?service=رقم أمريكي&amp;price=150"><button class="buy-btn">اضغط هنا للدفع</button></a>
+    </div>
+  </div>  <div class="section" id="pubg">
+    <div class="offers">
+      <h2>عروض شحن شدات ببجي</h2>
+      <ul>
+        <li>60 شدة: 46ج <a href="pay.html?service=60 شدة&amp;price=46"><button class="buy-btn">شراء</button></a></li>
+        <li>120 شدة: 90ج <a href="pay.html?service=120 شدة&amp;price=90"><button class="buy-btn">شراء</button></a></li>
+        <li>325 شدة: 225ج <a href="pay.html?service=325 شدة&amp;price=225"><button class="buy-btn">شراء</button></a></li>
+        <li>660 شدة: 470ج <a href="pay.html?service=660 شدة&amp;price=470"><button class="buy-btn">شراء</button></a></li>
+      </ul>
+    </div>
+  </div>  <div class="footer">
+    <div class="social">
+      <a href="https://youtube.com/@sniper12620" target="_blank"><img src="yt.png">يوتيوب</a>
+      <a href="https://wa.me/201080265792" target="_blank"><img src="wa.png">واتساب</a>
+      <a href="https://www.facebook.com/share/1Bhx3YAurZ/" target="_blank"><img src="fb.png">فيسبوك</a>
+      <a href="https://www.instagram.com/aliradwan4387/" target="_blank"><img src="ig.png">انستقرام</a>
+      <a href="https://www.tiktok.com/@aliradwan2009" target="_blank"><img src="tt.png">تيك توك</a>
+    </div>
+    <p><a href="#about">نبذة عنا</a> | <a href="https://wa.me/201080265792">الدعم</a></p>
+  </div>  <script>
+    function toggleMenu() {
+      document.getElementById('sideMenu').classList.toggle('active');
+    }
+  </script></body>
 </html>
