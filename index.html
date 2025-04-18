@@ -1,160 +1,140 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html><html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ali Gaming - متجر شدات و فيز شحن</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Gaming</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
       margin: 0;
-      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
     }
-
     header {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #111;
+      padding: 10px 20px;
     }
-
-    header h1 {
-      font-size: 36px;
-      color: #00ffff;
+    header img {
+      width: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
     }
-
-    .container {
-      padding: 20px;
+    .logo {
+      display: flex;
+      align-items: center;
     }
-
-    .product-card {
-      background-color: #333;
+    .logo h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #fff;
+    }
+    .menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #1c1c1c;
+      height: 100%;
+      width: 250px;
+      padding-top: 60px;
+    }
+    .menu a {
+      display: block;
       padding: 15px;
-      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .menu a:hover {
+      background-color: #444;
+    }
+    .content {
+      margin-left: 270px;
+      padding: 20px;
+    }
+    .section {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 10px;
       margin-bottom: 20px;
     }
-
-    .product-card h3 {
-      color: #00ffff;
+    .section h2 {
+      color: #ffcc00;
     }
-
-    .button {
-      background-color: green;
+    .buy-button {
+      background-color: #28a745;
       color: white;
-      padding: 10px 20px;
+      padding: 10px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      text-decoration: none;
     }
-
-    .important {
-      color: red;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    footer {
-      background-color: #000;
-      color: white;
-      text-align: center;
+    .footer {
+      background-color: #111;
       padding: 20px;
-    }
-
-    footer a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    .nav-menu {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
-
-    .nav-item {
-      padding: 10px;
-      background-color: #444;
-      border-radius: 5px;
-    }
-
-    .nav-item a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer-links a {
-      margin: 0 10px;
+      text-align: center;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Ali Gaming</h1>
-    <p>أفضل العروض لشدات ببجي، فيزا شحن سبام وأرقام تواصل اجتماعي</p>
-  </header>
-
-  <div class="container">
-    <div class="product-card">
-      <h3>عروض شدات ببجي</h3>
-      <p>نقدم لك أفضل العروض لشراء شدات ببجي بكل الكميات</p>
-      <ul>
-        <li>60 شدة: 46 جنيه</li>
-        <li>120 شدة: 90 جنيه</li>
-        <li>325 شدة: 225 جنيه</li>
-        <li>660 شدة: 470 جنيه</li>
-        <li>1850 شدة: 1210 جنيه</li>
-        <li>2850 شدة: 2350 جنيه</li>
-        <li>8100 شدة: 4700 جنيه</li>
-        <li>16200 شدة: 9500 جنيه</li>
-      </ul>
-      <a href="your_purchase_page.html" class="button">شراء</a>
+    <div class="logo">
+      <img src="صوره%20الملف%20الشخصي.jpg" alt="Ali Gaming">
+      <h1>Ali Gaming</h1>
     </div>
+  </header>  <div class="menu">
+    <a href="#pubg">شدات ببجي</a>
+    <a href="#numbers">أرقام للتطبيقات</a>
+    <a href="#spam-visa">فيز شحن سبام</a>
+    <a href="#about">نبذة عنا</a>
+    <a href="https://wa.me/201080265792">الدعم الفني</a>
+  </div>  <div class="content">
+    <div class="section" id="pubg">
+      <h2>عروض شحن شدات ببجي</h2>
+      <p>* 60 شدة: 46 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+60+شدة+PUBG')">شراء</button></p>
+      <p>* 120 شدة: 90 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+120+شدة+PUBG')">شراء</button></p>
+      <p>* 325 شدة: 225 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+325+شدة+PUBG')">شراء</button></p>
+      <p>* 660 شدة: 470 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+660+شدة+PUBG')">شراء</button></p>
+      <p>* 1850 شدة: 1210 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+1850+شدة+PUBG')">شراء</button></p>
+      <p>* 2850 شدة: 2350 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+2850+شدة+PUBG')">شراء</button></p>
+      <p>* 8100 شدة: 4700 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+8100+شدة+PUBG')">شراء</button></p>
+      <p>* 16200 شدة: 9500 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+شراء+16200+شدة+PUBG')">شراء</button></p>
+      <p>لكميات أخرى تواصل على: 01080265792</p>
+    </div><div class="section" id="numbers">
+  <h2>عروض الأرقام للتطبيقات</h2>
+  <p>رقم أمريكي 🇺🇲: 150 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+رقم+أمريكي')">شراء</button></p>
+  <p>رقم هندي 🇮🇳 أو روسي 🇷🇺: 100 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+رقم+هندي+أو+روسي')">شراء</button></p>
+  <p>رقم سعودي 🇸🇦 أو إماراتي 🇦🇪: 100 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+رقم+سعودي+أو+إماراتي')">شراء</button></p>
+  <p>رقم مصري 🇪🇬: 50 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+رقم+مصري')">شراء</button></p>
+  <p>أي رقم آخر: 100 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+رقم+آخر')">شراء</button></p>
+</div>
 
-    <div class="product-card">
-      <h3>عروض الأرقام</h3>
-      <p>نقدم أرقام أمريكية، هندية، سعودية، مصرية والعديد من الأرقام الأخرى</p>
-      <ul>
-        <li>رقم أمريكي: 150 جنيه</li>
-        <li>رقم هندي أو روسي: 100 جنيه</li>
-        <li>رقم سعودي أو إماراتي: 100 جنيه</li>
-        <li>رقم مصري: 50 جنيه</li>
-      </ul>
-      <a href="your_purchase_page.html" class="button">شراء</a>
-    </div>
+<div class="section" id="spam-visa">
+  <h2>عروض فيز شحن سبام</h2>
+  <p>نسبة نجاح 30% = 300 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+فيزا+30%')">شراء</button></p>
+  <p>نسبة نجاح 50% = 430 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+فيزا+50%')">شراء</button></p>
+  <p>نسبة نجاح 70% = 600 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+فيزا+70%')">شراء</button></p>
+  <p>نسبة نجاح 80% = 750 جنيه <button class="buy-button" onclick="window.open('https://wa.me/201080265792?text=طلب+فيزا+80%')">شراء</button></p>
+  <p>خصم من 10% إلى 20% لأول 3 أشخاص! اغتنم الفرصة!</p>
+</div>
 
-    <div class="product-card">
-      <h3>كروت شحن سبام</h3>
-      <p>شراء فيز شحن سبام بنسبة نجاح مختلفة</p>
-      <ul>
-        <li>فيزا نسبة النجاح 30%: 300 جنيه</li>
-        <li>فيزا نسبة النجاح 50%: 430 جنيه</li>
-        <li>فيزا نسبة النجاح 70%: 600 جنيه</li>
-        <li>فيزا نسبة النجاح 80%: 750 جنيه</li>
-      </ul>
-      <a href="your_purchase_page.html" class="button">شراء</a>
-    </div>
+<div class="section" id="about">
+  <h2>نبذة عنا</h2>
+  <p>نحن متخصصون في تقديم خدمات رقمية مثل شدات ببجي، أرقام للتطبيقات، وفيز شحن سبام. يتم إرسال الفيزا أونلاين بعد الدفع مباشرة. هدفنا هو تقديم أفضل خدمة بأعلى جودة.</p>
+</div>
 
-    <div class="product-card">
-      <h3>بيع فيز شحن سبام</h3>
-      <p>نقدم فيزا شحن سبام بنسبة نجاح مختلفة وفقاً للسعر المحدد</p>
-      <p class="important">خصم من 10% إلى 20% لأول ثلاثة عملاء</p>
-      <a href="your_purchase_page.html" class="button">شراء</a>
-    </div>
-
+  </div>  <div class="footer">
+    <p>تابعنا على:</p>
+    <p>
+      <a href="https://www.facebook.com/share/1Bhx3YAurZ/" style="color:#3b5998">فيسبوك</a> |
+      <a href="https://youtube.com/@sniper12620?si=u6_gUp9_BNipbl_S" style="color:red">يوتيوب</a> |
+      <a href="https://www.instagram.com/aliradwan4387" style="color:#c13584">انستجرام</a> |
+      <a href="https://www.tiktok.com/@aliradwan2009" style="color:#000">تيك توك</a> |
+      <a href="https://wa.me/201080265792" style="color:green">واتساب</a>
+    </p>
   </div>
-
-  <footer>
-    <p>للتواصل معنا عبر وسائل التواصل الاجتماعي</p>
-    <div class="footer-links">
-      <a href="https://www.facebook.com/share/1Bhx3YAurZ/" target="_blank">فيسبوك</a> | 
-      <a href="https://www.instagram.com/aliradwan4387/" target="_blank">إنستغرام</a> | 
-      <a href="https://www.tiktok.com/@aliradwan2009" target="_blank">تيك توك</a>
-    </div>
-    <p class="note">© 2025 Ali Gaming. جميع الحقوق محفوظة.</p>
-  </footer>
-
 </body>
 </html>
